@@ -1,3 +1,3 @@
 #!/bin/bash
 
-babel src --presets react --watch --out-dir static
+babel src --presets react --out-dir static
