@@ -1,3 +1,11 @@
+# build
+static/
+
+# dependencies
 node_modules
-static/App.js
+
+# log
 npm-debug.log
+
+# environment
+.env

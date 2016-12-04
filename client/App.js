@@ -1,13 +1,19 @@
-var users = [
+const users = [
   {id: 1, name: 'Abby'},
-  {id: 2, name: 'Tyler'}
-]
+  {id: 2, name: 'Tyler'},
+];
 
-var questions = [
+const questions = [
   {id: 1, question: 'When is the last time you cried?'},
   {id: 2, question: 'What is your relationship with your parents?'},
-  {id: 3, question: 'When is the last time you felt proud of yourself?'}
-]
+  {id: 3, question: 'When is the last time you felt proud of yourself?'},
+];
+
+const Data = {
+  users,
+  questions,
+};
+
 
 class Header extends React.Component {
   render() {
@@ -47,21 +53,21 @@ class App extends React.Component {
     var questionIdx = 0;
     this.state = {
       questionIdx: questionIdx,
-      question: questions[questionIdx]
+      question: Data.questions[questionIdx]
     }
   }
   changeQuestion() {
     var questionIdx = (this.state.questionIdx + 1) % questions.length;
     this.setState({
       questionIdx: questionIdx,
-      question: questions[questionIdx]
+      question: Data.questions[questionIdx]
     });
   }
   render() {
     return (
       <div>
         <Header />
-        <Welcome user={users[0]} question={this.state.question} />
+        <Welcome user={Data.users[0]} question={this.state.question} />
         <button onClick={this.changeQuestion.bind(this)}>Answer a different question</button>
       </div>
     );
@@ -70,5 +76,5 @@ class App extends React.Component {
 
 ReactDOM.render(
   <App />,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
