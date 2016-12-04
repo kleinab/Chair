@@ -1,4 +1,9 @@
 # Chair
+Get personal, trade experiences. People will surprise you.
 
-## Setup
-To start server, run `$ npm start`
+## Install
+To get nodemon, run `npm install -g nodemon`.
+
+## Run
+To start local mongo daemon, run `mongod` in a Terminal tab.
+To start server, run `npm start` in another Terminal tab.

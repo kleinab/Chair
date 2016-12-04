@@ -1,3 +1,3 @@
 #!/bin/bash
 
-babel src --presets react --watch --out-dir static
+babel client --presets react --watch --out-dir static --copy-files
