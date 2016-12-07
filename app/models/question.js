@@ -1,14 +1,8 @@
 var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
-module.exports = function(io) {
+var questionSchema = new Schema({
+  question: { type: String, required: true }
+})
 
-  var Schema = mongoose.Schema;
-
-  var questionSchema = new Schema({
-    question: { type: String, required: true }
-  })
-
-  // if the model already exists, use the existing model
-  return mongoose.models.Question || mongoose.model('Question', questionSchema);
-
-};
+module.exports = mongoose.model('Question', questionSchema);
