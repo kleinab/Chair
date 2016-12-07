@@ -1,5 +1,9 @@
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+
+
 const users = [
-  {id: 1, name: 'Abby'},
+  {id: 1, name: 'Abigail'},
   {id: 2, name: 'Tyler'},
 ];
 
@@ -15,7 +19,7 @@ const Data = {
 };
 
 
-class Header extends React.Component {
+class Header extends Component {
   render() {
     return (
       <div className="header">
@@ -34,7 +38,7 @@ function Question(props) {
   return <h2 className="question">{props.question}</h2>;
 }
 
-class Welcome extends React.Component {
+class Welcome extends Component {
   render() {
     return (
       <div className="welcome">
@@ -47,7 +51,7 @@ class Welcome extends React.Component {
   }
 }
 
-class App extends React.Component {
+class App extends Component {
   constructor() {
     super();
     var questionIdx = 0;
@@ -74,7 +78,7 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(
+render(
   <App />,
   document.getElementById('root'),
 );
