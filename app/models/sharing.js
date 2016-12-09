@@ -17,8 +17,8 @@ var sharingSchema = new Schema({
     }],
     validate: [arrayLimit, '{PATH} can be no longer than 2']
   },
-  question_id: { type: ObjectId, ref: 'Question' },
-  created_at: { type: Date }
+  questionId: { type: ObjectId, ref: 'Question' },
+  createdAt: { type: Date }
 })
 
 function arrayLimit(arr) {
